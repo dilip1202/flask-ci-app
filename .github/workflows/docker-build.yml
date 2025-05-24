@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: yourdockerhubusername/flask-ci-app:latest
+          tags: maddasvecb5/flask-ci-app:latest
