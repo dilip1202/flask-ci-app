@@ -1,0 +1,12 @@
+version: "3.8"  # Compose file version
+
+services:
+  web:
+    build: .            # Use Dockerfile in current directory to build image
+    ports:
+      - "5000:5000"     # Map container port 5000 to host port 5000
+    volumes:
+      - .:/app          # Mount current directory to /app inside container (for live code reload)
+    environment:
+      - FLASK_ENV=development  # Set environment variable inside container
+    command: flask run --host=0.0.0.0  # Start Flask server accessible from outside container
